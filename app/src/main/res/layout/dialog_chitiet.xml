@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:text="ID: "
+                android:textSize="20sp"
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_ma_sach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:text="Mã sách: "
+                android:textSize="20sp"
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_tieu_de"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Tiêu đề: "
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_tac_gia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Tác giả: "
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_namxb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Năm xuất bản: "
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_so_trang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Số trang: "
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/tv_the_loai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Thể loại: "
+                android:maxLines="1"
+                android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_dong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="đóng"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
