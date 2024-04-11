@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void getData(ArrayList<Sach> listSach) {
-        Toast.makeText(this, "oke", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "oke", Toast.LENGTH_SHORT).show();
         adapter = new AdapterSach(MainActivity.this, listSach);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -135,6 +135,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AddSach.class);
                 intent.putExtra("type","update");
                 intent.putExtra("id",sach.get_id());
+                intent.putExtra("masach",sach.getMa_sach());
+                intent.putExtra("tieude",sach.getTieu_de());
+                intent.putExtra("tacgia",sach.getTac_gia());
+                intent.putExtra("namxuatban",sach.getNam_xuat_ban());
+                intent.putExtra("sotrang",sach.getSo_trang());
+                intent.putExtra("theloai",sach.getThe_loai());
+
                 startActivity(intent);
             }
 

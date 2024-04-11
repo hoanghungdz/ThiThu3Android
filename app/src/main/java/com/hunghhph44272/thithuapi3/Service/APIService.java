@@ -16,7 +16,7 @@ import retrofit2.http.Query;
 
 public interface APIService {
     //leTai: 192.168.1.11  vietBach: 192.168.1.23  hoanghung: 172.20.10.2
-    String ipv4 = "172.20.10.2";
+    String ipv4 = "192.168.1.4";
     String DOMAIN = "http://"+ ipv4 +":3000/api/";
 
     @GET("get-list-sach")

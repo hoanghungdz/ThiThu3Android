@@ -26,8 +26,9 @@ public class AddSach extends AppCompatActivity {
 
     private File file;
     EditText edtMasach, edtTieuDe, edtTacGia, edtNamxb, edtSoTrang, edtTheLoai;
-
+    String id, ma, tieude, tacgia, namxb, theloai, sotrang;
     HttpRequest httpRequest = new HttpRequest();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class AddSach extends AppCompatActivity {
         edtNamxb = findViewById(R.id.edt_namxb);
         edtSoTrang = findViewById(R.id.edt_so_trang);
         edtTheLoai = findViewById(R.id.edt_the_loai);
+
+        getIntentMain();
 
         findViewById(R.id.btn_submit).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,4 +114,33 @@ public class AddSach extends AppCompatActivity {
     private RequestBody getRequestBody(String value) {
         return RequestBody.create(MediaType.parse("multipart/form-data"), value);
     }
+
+    private void getIntentMain() {
+        Bundle bundle = getIntent().getExtras();
+        if (bundle.getInt("type") == 0) {
+            id = bundle.getString("id");
+            ma = bundle.getString("masach");
+            tieude = bundle.getString("tieude");
+            tacgia = bundle.getString("tacgia");
+            theloai = bundle.getString("theloai");
+            namxb = bundle.getString("namxuatban");
+            sotrang = bundle.getString("sotrang");
+//
+//            if (gioitinh.equals("Nam")) {
+//                spnGioiTinh.setSelection(0);
+//            } else if (gioitinh.equals("Nữ")) {
+//                spnGioiTinh.setSelection(1);
+//            } else {
+//                spnGioiTinh.setSelection(2);
+//            }
+            edtMasach.setText(ma);
+            edtTieuDe.setText(tieude);
+            edtTacGia.setText(tacgia);
+            edtNamxb.setText(namxb);
+            edtSoTrang.setText(sotrang);
+            edtTheLoai.setText(theloai);
+
+        }
+    }
+
 }
